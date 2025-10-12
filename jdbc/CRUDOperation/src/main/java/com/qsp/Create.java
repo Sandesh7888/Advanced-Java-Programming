@@ -16,7 +16,7 @@ public class Create {
 		
 		Statement stm= con.createStatement();
 		stm.execute("Create table user ( id int primary key, name varchar2(100 ), num number(12)");
-		
+		con.close();
 		
 	}
 
