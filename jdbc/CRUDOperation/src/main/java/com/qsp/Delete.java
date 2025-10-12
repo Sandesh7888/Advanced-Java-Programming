@@ -1,6 +1,6 @@
-package com.demo;
+package com.qsp;
 
-public class Read {
+public class Delete {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
