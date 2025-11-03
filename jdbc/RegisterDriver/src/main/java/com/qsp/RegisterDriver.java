@@ -11,9 +11,11 @@ public class RegisterDriver {
 
         try {
             // Load the PostgreSQL driver class dynamically
+        	//
             Class.forName("org.postgresql.Driver");
             System.out.println("Driver loaded successfully.");
 
+            //
             // Establish the connection
             con = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/postgres", 
