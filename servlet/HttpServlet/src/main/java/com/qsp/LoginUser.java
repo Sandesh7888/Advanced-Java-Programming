@@ -37,7 +37,13 @@ public class LoginUser extends HttpServlet {
 
 		String username=req.getParameter("uername");
 		String password =req.getParameter("password");	
-	
+		
+		PrintWriter p= resp.getWriter();
+		
+		if(username.equals("onkar123") && password.equals("123456")) {
+				p.write("<html><body>");
+			    p.write("<h1>Login succesfully<h1>"+username);
+			    p.write("<h1><h1>"+password);
 			    p.write("</html></body>");
 		}else {
 				p.write("<html><body>");
