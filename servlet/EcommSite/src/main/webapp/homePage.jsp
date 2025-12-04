@@ -7,7 +7,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>HOme PaGE</h1>
+
+<%
+	HttpSession session2 = request.getSession();
+	String userName = (String)session2.getAttribute("userName");
+	String password = (String)session2.getAttribute("password");
+%>
+
+<%
+	if(userName!= null && password!= null)
+	{
+%>
+
+<h1>Login Successfully..!</h1>
+
+<form action="logout">
+	<input type="submit" value="LogOut">
+</form>
+
+<%
+	}
+	else
+	{
+%>
+
+<h2>UserName and password not found..!</h2>
+
+<%
+	}
+%>
 
 </body>
 </html>

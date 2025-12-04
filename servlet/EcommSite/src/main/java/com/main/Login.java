@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -45,6 +46,13 @@ public class Login extends HttpServlet {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
+            	
+            	System.out.println("logged in ");
+            	
+            	HttpSession session =req.getSession();
+            	session.setAttribute("username", username);
+            	session.setAttribute("password", password);
+            	
 
                 // If login success → go to Home.jsp
                 RequestDispatcher rd = req.getRequestDispatcher("homePage.jsp");
