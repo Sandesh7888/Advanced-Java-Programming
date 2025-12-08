@@ -27,17 +27,13 @@ public class Main {
 		r2.setId(202);
 		r2.setHeading("bad review");
 		r2.setMsg("Product is bad");
-		r2.setProduct(product);
+		r2.setProduct(product);	
 		
 		transaction.begin();
 		entityManager.persist(product);
 		entityManager.persist(r2);
 		entityManager.persist(r1);
 		transaction.commit();
-		
-		
-		
-
 	}
 
 }
