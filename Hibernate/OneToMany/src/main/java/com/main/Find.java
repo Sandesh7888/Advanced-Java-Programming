@@ -3,13 +3,12 @@ package com.main;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class Find {
 	public static void main(String[] args) {
 		EntityManager em = Persistence.createEntityManagerFactory("vikas").createEntityManager();
-		EntityTransaction et = em.getTransaction();
+		
 		
 		Bank bank = em.find(Bank.class,101);
 		List<Account> list=bank.getAccounts();
